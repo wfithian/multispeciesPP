@@ -1,0 +1,9 @@
+Package: multispeciesPP
+Type: Package
+Title: Multispecies Poisson Process Models
+Version: 1.0
+Date: 2014-03-12
+Author: William Fithian
+Maintainer: William Fithian <wfithian@stanford.edu>
+Description: This package implements a proportional-bias model for presence-only and presence-absence data from multiple species.
+License: GPL-2

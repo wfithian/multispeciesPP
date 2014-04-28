@@ -1,0 +1,77 @@
+\name{summary.multispeciesPP}
+\alias{summary.multispeciesPP}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{
+  Construct summary table for multispeciesPP model
+}
+\description{
+  Construct summary table for multispeciesPP model
+}
+\usage{
+summary(object, standardized = TRUE, ...)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{object}{
+%%     ~~Describe \code{object} here~~
+}
+  \item{standardized}{
+%%     ~~Describe \code{standardized} here~~
+}
+  \item{\dots}{
+%%     ~~Describe \code{\dots} here~~
+}
+}
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+}
+\value{
+%%  ~Describe the value returned
+%%  If it is a LIST, use
+%%  \item{comp1 }{Description of 'comp1'}
+%%  \item{comp2 }{Description of 'comp2'}
+%% ...
+}
+\references{
+%% ~put references to the literature/web site here ~
+}
+\author{
+  William Fithian
+}
+\note{
+%%  ~~further notes~~
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\seealso{
+%% ~~objects to See Also as \code{\link{help}}, ~~~
+}
+\examples{
+##---- Should be DIRECTLY executable !! ----
+##-- ==>  Define data, use random,
+##--	or do  help(data=index)  for the standard data sets.
+
+## The function is currently defined as
+function (object, standardized = TRUE, ...)
+{
+    if (standardized) {
+        coefs <- object$normalized.all.coef
+        se <- object$normalized.std.errs
+    }
+    else {
+        coefs <- object$all.coef
+        se <- object$std.errs
+    }
+    coef.table <- data.frame(coefs, se, coefs/se, 2 * pnorm(-abs(coefs/se)))
+    colnames(coef.table) <- c("Estimate", "Std. Error", "z value",
+        "Pr(>|z|)")
+    tr <- list(coef.table = coef.table)
+    class(tr) <- "summary.multispeciesPP"
+    tr
+  }
+}
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ ~kwd1 }
+\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
