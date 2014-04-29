@@ -42,7 +42,7 @@ spec.names <- letters[1:(n.other.spec+1)]
 ## Geographic covariates affecting species abundance
 x <- matrix(rnorm(2*n.pixel),nrow=n.pixel)
 
-## Geographic covariate causing selection bias (correlated with x2)
+## Geographic covariate causing selection bias (correlated with x1)
 z <- scale(x[,1] + rnorm(n.pixel)*sqrt(.95^(-2)-1))
 
 ## Intercept and slopes for abundance rate
