@@ -17,8 +17,6 @@ Version: \tab 1.0\cr
 Date: \tab 2014-03-28\cr
 License: \tab What license is it under?\cr
 }
-~~ An overview of how to use the package, including the most important ~~
-~~ functions ~~
 }
 \author{
 William Fithian
@@ -29,8 +27,8 @@ Maintainer: William Fithian <wfithian@stanford.edu>
   "A proportional bias model for multispecies distribution modeling."
   William Fithian, Jane Elith, Trevor Hastie, and David A. Keith.
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
-~~ the R documentation directory ~~
+
+
 \keyword{ package }
 \seealso{
 }
